@@ -117,6 +117,7 @@ class PokemonDataset(Dataset):
     def query(self, query: str):
         new = deepcopy(self)
         new.df = new.df.query(query).reset_index(drop=True)
+        return new
 
     def sample(self, n: int):
         new = deepcopy(self)
