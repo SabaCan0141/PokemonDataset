@@ -104,7 +104,7 @@ PokemonDataset(
 特定の条件でデータセットをフィルタリングします。pandasの`DataFrame.query`と同じ形式のクエリ文字列を渡します。
 ```Python
 # 炎タイプまたはドラゴンタイプのポケモンだけを抽出
-fire_or_dragon_pokemon = pokemon_dataset.query("type_fire == 1 or type_dragon == 1")
+fire_or_dragon_pokemon = pokemon_dataset.query("fire == 1 or dragon == 1")
 ```
 
 ##### `.sample(n: int)`
