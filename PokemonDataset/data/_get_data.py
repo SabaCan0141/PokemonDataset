@@ -41,6 +41,9 @@ def download_image(url, save_path, TARGET_SIZE):
 
 
 def get_data():
+    os.makedirs(os.path.join(_base_dir, "images", "default"), exist_ok=True)
+    os.makedirs(os.path.join(_base_dir, "images", "shiny"), exist_ok=True)
+
     response = requests.get("https://pokeapi.co/api/v2/pokemon?limit=10000")
 
     with open(os.path.join(_base_dir, "data.csv"), "w", newline='', encoding="utf-8") as csvfile:
